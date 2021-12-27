@@ -12,10 +12,10 @@ const { mongodb } = require('./config.js')
 const typeDefs = require('./graphql/typeDefs.js')
 
 
-
 const server = new ApolloServer({
     typeDefs,
-    resolvers
+    resolvers,
+    context: ({ req }) => ({ req })
 })
 
 // Connects to the database
