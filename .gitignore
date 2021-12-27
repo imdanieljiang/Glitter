@@ -1,0 +1,5 @@
+# Doesn't include the node modules packages
+node_modules
+
+# Doesn't include sensitive data
+config.js
