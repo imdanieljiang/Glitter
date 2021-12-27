@@ -3,3 +3,6 @@ node_modules
 
 # Doesn't include sensitive data
 config.js
+
+# Don't include Mac files
+*.DS_Store
