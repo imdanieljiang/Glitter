@@ -1,25 +1,49 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+import { Container } from 'semantic-ui-react'
+
+import 'semantic-ui-css/semantic.min.css'
+import './App.css'
+
+import MenuBar from './components/MenuBar.js'
+import Home from './pages/Home.js'
+import Login from './pages/Login.js'
+import Register from './pages/Register.js'
+
+// function App() {
+//   return (
+//     <Router>
+//       <Container>
+//         <MenuBar/>
+//         <Route exact path='/' component={Home}/>
+//         <Route exact path='/login' component={Login}/>
+//         <Route exact path='/register' component={Register}/>
+//       </Container>
+//     </Router>
+//   );
+// }
+
+// function App() {
+//   return (
+//     <div>
+//       <h1>Hello World!</h1>
+//     </div>
+//   );
+// }
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Container>
+        <MenuBar/>
+        <Routes>
+          <Route exact path="/" element={<Home />}/>
+          <Route exact path="/login" element={<Login />}/>
+          <Route exact path="/register" element={<Register />}/>
+        </Routes>
+      </Container>
+    </Router>
   );
 }
 
-export default App;
+export default App
