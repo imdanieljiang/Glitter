@@ -10,27 +10,6 @@ import Home from './pages/Home.js'
 import Login from './pages/Login.js'
 import Register from './pages/Register.js'
 
-// function App() {
-//   return (
-//     <Router>
-//       <Container>
-//         <MenuBar/>
-//         <Route exact path='/' component={Home}/>
-//         <Route exact path='/login' component={Login}/>
-//         <Route exact path='/register' component={Register}/>
-//       </Container>
-//     </Router>
-//   );
-// }
-
-// function App() {
-//   return (
-//     <div>
-//       <h1>Hello World!</h1>
-//     </div>
-//   );
-// }
-
 function App() {
   return (
     <Router>
