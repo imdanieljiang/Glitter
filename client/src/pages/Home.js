@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import { useQuery } from '@apollo/react-hooks'
-import { Grid } from 'semantic-ui-react'
+import { Grid, Transition } from 'semantic-ui-react'
 
 import { AuthContext } from '../context/auth.js'
 import PostCard from '../components/PostCard.js'
@@ -37,7 +37,9 @@ function Home() {
             </Grid.Row>
             <Grid.Row>
                 {postForm}
-                {posts}
+                <Transition.Group>
+                    {posts}
+                </Transition.Group>
             </Grid.Row>
         </Grid>
     )
